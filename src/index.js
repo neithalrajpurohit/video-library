@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {VideoProvider} from './context/video-context';
 
 ReactDOM.render(
   <React.StrictMode>
+<VideoProvider>
+
     <App />
+</VideoProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
