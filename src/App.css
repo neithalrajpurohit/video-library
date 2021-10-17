@@ -1,3 +1,38 @@
-.dis{
-  
+.text {
+  width: 400px;
+  font-size: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* margin-bottom: 1rem; */
+}
+.nav {
+  background-color: #78350f;
+  color: white;
+  padding: 1rem;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  outline: none;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: aliceblue;
+}
+.home-color {
+  background-color: #bfdbfe;
+  padding-top: 1rem;
 }
