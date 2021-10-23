@@ -1,16 +1,18 @@
 .text {
   width: 400px;
   font-size: 20px;
+  color: white;
 }
 .card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* margin-bottom: 1rem; */
+  padding-top: 1rem;
+  background-color: #333335;
 }
 .nav {
-  background-color: #78350f;
+  background-color: #2a2a2b;
   color: white;
   padding: 1rem;
   border: 1px solid transparent;
@@ -33,6 +35,12 @@
   background-color: aliceblue;
 }
 .home-color {
-  background-color: #bfdbfe;
+  background-color: #333335;
   padding-top: 1rem;
+}
+
+.style-video {
+  padding-top: 32px;
+  padding-left: 10rem;
+  padding-right: 5rem;
 }
