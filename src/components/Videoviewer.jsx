@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useVideo } from "../context/video-context";
+import image from "../assets/like.png";
 
 export const Videoviewer = () => {
   const { videoId } = useParams();
@@ -16,7 +17,10 @@ export const Videoviewer = () => {
         src={video?.url}
         allowFullScreen
       />
-      <h1>{video?.title}</h1>
+      <h1 className="video-text">{video?.title}</h1>
+      <button className="like-btn">
+        <img className="like-img" src={image} alt="like" />
+      </button>
     </div>
   );
 };

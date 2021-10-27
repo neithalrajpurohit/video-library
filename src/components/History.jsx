@@ -2,13 +2,10 @@ import { Link } from "react-router-dom";
 import houseImage from "../assets/house.png";
 import likedImage from "../assets/liked.png";
 import historyImage from "../assets/history.png";
-import { useVideo } from "../context/video-context";
 
-export const Home = () => {
-  const { videos, loader } = useVideo();
-  console.log(videos);
+export const History = () => {
   return (
-    <div className="video-cnt">
+    <div className="liked-cnt">
       <div style={{ paddingTop: "5rem", marginBottom: "1rem" }}>
         <Link className="vd-links" to="/">
           <img src={houseImage} alt="house" width="20px" height="20px" />
@@ -26,30 +23,6 @@ export const Home = () => {
           <img src={historyImage} alt="history" width="20px" height="20px" />
           History
         </Link>
-      </div>
-      <div className="card">
-        {videos?.map((video) => (
-          <div key={video.video_id}>
-            <Link
-              style={{ textDecoration: "none" }}
-              to={`/watch/${video.video_id}`}
-            >
-              <img src={video.image} alt="images" width="400" height="200" />
-              <h1 className="text">{video.title}</h1>
-            </Link>
-          </div>
-        ))}
-        {loader && (
-          <h1
-            style={{
-              backgroundColor: "white",
-              height: "100vh",
-              width: "100vh",
-            }}
-          >
-            Loading......
-          </h1>
-        )}
       </div>
     </div>
   );
