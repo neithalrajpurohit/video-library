@@ -7,7 +7,7 @@ import { Liked } from "./components/Liked";
 import { History } from "./components/History";
 import { Login } from "./components/Login";
 import { Signup } from "./components/Signup";
-
+import { PrivateRoute } from "./components/PrivateRoute";
 function App() {
   return (
     <div>
@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/watch/:videoId" element={<Videoviewer />} />
-        <Route path="/like" element={<Liked />} />
-        <Route path="/history" element={<History />} />
+        <PrivateRoute path="/like" element={<Liked />} />
+        <PrivateRoute path="/history" element={<History />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>

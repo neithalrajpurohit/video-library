@@ -5,14 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { VideoProvider } from "./context/video-context";
 import { BrowserRouter as Router } from "react-router-dom";
+import { AuthProvider } from "./context/auth-context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <VideoProvider>
-      <Router>
-        <App />
-      </Router>
-    </VideoProvider>
+    <Router>
+      <AuthProvider>
+        <VideoProvider>
+          <App />
+        </VideoProvider>
+      </AuthProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
