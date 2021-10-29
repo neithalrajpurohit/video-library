@@ -6,16 +6,15 @@ import { useVideo } from "../context/video-context";
 
 export const Home = () => {
   const { videos, loader } = useVideo();
-  console.log(videos);
   return (
     <div className="video-cnt">
-      <div style={{ paddingTop: "5rem", marginBottom: "1rem" }}>
+      <div style={{ paddingTop: "3rem", marginBottom: "1.5rem" }}>
         <Link className="vd-links" to="/">
           <img src={houseImage} alt="house" width="20px" height="20px" />
           Home
         </Link>
       </div>
-      <div style={{ marginBottom: "1rem" }}>
+      <div style={{ marginBottom: "1.5rem" }}>
         <Link className="vd-links" to="/like">
           <img src={likedImage} alt="liked" width="20px" height="20px" />
           Liked

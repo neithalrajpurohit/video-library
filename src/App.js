@@ -1,20 +1,25 @@
 import "./App.css";
-import { Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Videoviewer } from "./components/Videoviewer";
 import { Liked } from "./components/Liked";
 import { History } from "./components/History";
+import { Login } from "./components/Login";
+import { Signup } from "./components/Signup";
+
 function App() {
   return (
     <div>
       <Header />
 
       <Routes>
-        <Routes path="/" element={<Home />} />
-        <Routes path="/watch/:videoId" element={<Videoviewer />} />
-        <Routes path="/like" element={<Liked />} />
-        <Routes path="/history" element={<History />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/watch/:videoId" element={<Videoviewer />} />
+        <Route path="/like" element={<Liked />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

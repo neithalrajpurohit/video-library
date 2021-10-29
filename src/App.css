@@ -8,8 +8,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: -10rem;
-  padding-left: 7rem;
+  margin-top: -8rem;
+  padding-left: 10rem;
 }
 .nav {
   background-color: #2a2a2b;
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5rem;
+  padding-left: 2rem;
 }
 .btn {
   outline: none;
@@ -67,9 +67,77 @@
   color: aliceblue;
   text-decoration: none;
   font-size: 25px;
-  padding-left: 1rem;
+  padding-left: 2.5rem;
 }
 .liked-cnt {
   background-color: #333335 !important;
   height: 100vh;
+}
+
+.vd-links:hover {
+  background-color: cadetblue;
+  height: 20px;
+  width: 100px;
+  margin-left: 1.5rem;
+  border-radius: 1rem;
+  padding-right: 20px;
+  padding-left: 10px !important;
+}
+.signup-cmp {
+  margin: auto;
+  text-align: center;
+  align-items: middle;
+  border: 1px solid #bfdbfe;
+  height: auto;
+  width: 20rem;
+  border-radius: 10px;
+  background-color: #eff6ff;
+}
+.auth-container {
+  margin-top: 7rem;
+}
+.input-style {
+  margin-bottom: 1rem;
+  font-size: 15px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 13px;
+}
+.para-style {
+  color: gray;
+  opacity: 100%;
+}
+.signup-btn {
+  background-color: #3b82f6;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.style-login {
+  margin: auto;
+  text-align: center;
+  align-items: middle;
+  border: 1px solid #bfdbfe;
+  height: auto;
+  width: 20rem;
+  border-radius: 10px;
+  background-color: #eff6ff;
+  margin-top: 8rem;
+}
+.input-login {
+  margin-bottom: 1rem;
+  font-size: 15px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 13px;
+}
+.login-btn {
+  background-color: #3b82f6;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
 }
