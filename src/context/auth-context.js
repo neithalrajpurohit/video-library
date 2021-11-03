@@ -6,6 +6,7 @@ export function AuthProvider({ children }) {
   const [login, setLogin] = useState(false);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
   return (
     <authContext.Provider
       value={{

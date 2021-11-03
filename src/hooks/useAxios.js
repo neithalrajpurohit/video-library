@@ -11,7 +11,6 @@ export const useAxios = () => {
         "https://test-1.neithalrajpuroh.repl.co/auth/signup/new",
         { email, password }
       );
-
       setLogin(true);
       setToken(response.data.token);
       if (response.status === 200) {
@@ -22,5 +21,22 @@ export const useAxios = () => {
       console.log(err);
     }
   };
-  return { signUp };
+  const login = async (e, email, password) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "https://test-1.neithalrajpuroh.repl.co/auth/login",
+        { email, password }
+      );
+      setLogin(true);
+      setToken(response.data.token);
+      if (response.status === 200) {
+        localStorage?.setItem("login", JSON.stringify({ token }));
+        navigate("/");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  return { signUp, login };
 };
