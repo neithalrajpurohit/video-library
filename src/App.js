@@ -16,8 +16,22 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/watch/:videoId" element={<Videoviewer />} />
-        <PrivateRoute path="/like" element={<Liked />} />
-        <PrivateRoute path="/history" element={<History />} />
+        <Route
+          path="/like"
+          element={
+            <PrivateRoute>
+              <Liked />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/history"
+          element={
+            <PrivateRoute>
+              <History />
+            </PrivateRoute>
+          }
+        />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>

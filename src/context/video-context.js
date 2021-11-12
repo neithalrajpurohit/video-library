@@ -6,6 +6,7 @@ export function VideoProvider({ children }) {
   const [videos, setVideos] = useState([]); //eslint-disable-next-line
   const [error, setError] = useState(false);
   const [loader, setLoader] = useState(false);
+
   useEffect(() => {
     (async () => {
       setLoader(true);
