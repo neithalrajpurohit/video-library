@@ -30,6 +30,9 @@ export function VideoProvider({ children }) {
     <videoContext.Provider
       value={{
         videos,
+        setImmediate,
+        error,
+        setError,
         setVideos,
         loader,
         setLoader,
