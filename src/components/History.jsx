@@ -12,7 +12,6 @@ export const History = () => {
     (async()=>{
       try{
       const response= await axios.get("https://test-1.neithalrajpuroh.repl.co/history")
-
       setHistory(response.data.history);
     }
 catch(err){

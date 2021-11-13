@@ -3,9 +3,27 @@ import houseImage from "../assets/house.png";
 
 import likedImage from "../assets/liked.png";
 import historyImage from "../assets/history.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Liked = () => {
+  const[like,setLike]=useState([]);
+
+    useEffect(()=>{
+    (async()=>{
+      try{
+      const response=await axios.get("https://test-1.neithalrajpuroh.repl.co/like");
+      setLike(response.data.like);
+    }
+    catch(err){
+    console.log(err)
+    }
+    })()
+  },[])
+
   return (
+    <div>
+
     <div className="liked-cnt">
       <div style={{ paddingTop: "5rem", marginBottom: "1rem" }}>
         <Link className="vd-links" to="/">
@@ -26,5 +44,20 @@ export const Liked = () => {
         </Link>
       </div>
     </div>
+    <div className="card">
+    {like?.map((video) => (
+      <div key={video.video_id}>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={`/watch/${video.video_id}`}
+        >
+          <img src={video.image} alt="images" width="400" height="200" />
+          <h1 className="text">{video.title}</h1>
+        </Link>
+      </div>
+    ))}
+    </div>
+    </div>
   );
 };
+
