@@ -141,3 +141,16 @@
   font-size: 17px;
   cursor: pointer;
 }
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: -48rem;
+  padding-left: 10rem;
+}
+.texts {
+  width: 400px;
+  font-size: 20px;
+  color: white;
+}

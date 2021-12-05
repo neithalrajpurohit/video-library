@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { useVideo } from "../context/video-context";
 import { useEffect } from "react";
 import axios from "axios";
-import image from "../assets/liked.png";
+import image from "../assets/like.png";
 export const Videoviewer = () => {
 const { videoId } = useParams();
 const { videos } = useVideo();
@@ -10,20 +10,20 @@ const video = videos.find((video) => videoId === video.video_id);
     
   useEffect(() => {
     (async() => {
-        try{
-            const response = await axios.post("https://test-1.neithalrajpuroh.repl.co/history", video);
-            return response;
+      try{
+        const response = await axios.post("https://test-1.neithalrajpuroh.repl.co/history", video);
+        return response;
         } catch(err) {
             console.log(err)
         }
     })() // eslint-disable-next-line
-}, [])
-async function likeVideo(){
-   try{
+    }, [])
+  async function likeVideo(){
+    try{
       const response=await axios.post("https://test-1.neithalrajpuroh.repl.co/like",video);
       return response;
     }
-     catch(err){
+    catch(err){
       console.log(err);
    }
   }
@@ -44,3 +44,12 @@ async function likeVideo(){
     </div>
   );
 };
+
+
+
+
+
+
+
+
+

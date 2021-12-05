@@ -4,7 +4,7 @@ import { useAuth } from "../context/auth-context"
 export function PrivateRoute({children}) {
     let { token } = useAuth();
 
-    return token ? children :<Navigate to ="/login"/>
+    return token ? children : <Navigate to ="/login"/>
         
 
     

@@ -42,7 +42,7 @@ catch(err){
         </Link>
       </div>
     </div>
-      <div className="card">
+      <div className="cards">
         {history?.map((video) => (
           <div key={video.video_id}>
             <Link
@@ -50,7 +50,7 @@ catch(err){
               to={`/watch/${video.video_id}`}
             >
               <img src={video.image} alt="images" width="400" height="200" />
-              <h1 className="text">{video.title}</h1>
+              <h1 className="texts">{video.title}</h1>
             </Link>
           </div>
         ))}

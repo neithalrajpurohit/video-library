@@ -23,7 +23,6 @@ export const Liked = () => {
 
   return (
     <div>
-
     <div className="liked-cnt">
       <div style={{ paddingTop: "5rem", marginBottom: "1rem" }}>
         <Link className="vd-links" to="/">
@@ -44,7 +43,7 @@ export const Liked = () => {
         </Link>
       </div>
     </div>
-    <div className="card">
+    <div className="cards">
     {like?.map((video) => (
       <div key={video.video_id}>
         <Link
